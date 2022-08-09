@@ -1,12 +1,12 @@
 {
-    "name": "douyasi/laravel-editor-md",
+    "name": "yishui01/laravel-markdown-editor-md",
     "description": "editor.md for laravel",
-    "keywords": ["laravel", "editor.md", "markdown", "douyasi"],
+    "keywords": ["markdown","markdown-editor","editor","laravel", "editor.md", "markdown", "yishui01"],
     "license": "MIT",
     "authors": [
         {
-            "name": "raoyc",
-            "email": "raoyc2009@gmail.com"
+            "name": "yishui01",
+            "email": "727040917@qq.com"
         }
     ],
     "require": {
@@ -14,11 +14,18 @@
     },
     "autoload": {
         "psr-4": {
-            "Douyasi\\Editor\\": "src/"
+            "Yishui01\\MdEditor\\": "src/"
         },
         "files": [
             "src/helpers.php"
         ]
     },
-    "minimum-stability": "dev"
+    "minimum-stability": "dev",
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Yishui01\\MdEditor\\EditorServiceProvider"
+            ]
+        }
+    }
 }

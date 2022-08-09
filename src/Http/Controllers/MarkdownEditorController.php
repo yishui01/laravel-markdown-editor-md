@@ -1,6 +1,6 @@
 <?php
 
-namespace Douyasi\Editor\Http\Controllers;
+namespace Yishui01\MdEditor\Http\Controllers;
 
 use Illuminate\Routing\Controller;
 use Illuminate\Http\Request;
@@ -13,7 +13,7 @@ class MarkdownEditorController extends Controller
      * 针对editor.md所写的图片上传控制器
      * 
      * @param  Request $requst
-     * @return Response
+     * @return \Illuminate\Http\JsonResponse
      */
     public function postUploadMarkdownEditorPicture(Request $request)
     {

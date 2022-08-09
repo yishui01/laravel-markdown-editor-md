@@ -1,6 +1,6 @@
 <?php
 
-namespace Douyasi\Editor;
+namespace Yishui01\MdEditor;
 
 class EditorServiceProvider extends \Illuminate\Support\ServiceProvider
 {
