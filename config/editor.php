@@ -6,6 +6,8 @@
  * 请注意，这里的配置项值必须为字符串型的 `ture` 或 `false`
  */
 return [
+    'width'=>'100%',
+    'height'=>640,
     'emoji' => 'true',  //emoji表情
     'toc' => 'true',  //目录
     'tocm' => 'false',  //目录下拉菜单
@@ -16,4 +18,6 @@ return [
     'saveHTMLToTextarea' => 'true',  //保存 HTML 到 Textarea
     'codeFold' => 'true',  //代码折叠
     'sequenceDiagram' => 'false',  //开启时序/序列图支持，默认关闭
+    'imageFormats'=>["jpg","jpeg", "gif", "png", "bmp", "webp"],//图片上传类型
+    'imageUploadURL'=>'/laravel-editor-md/upload/picture?_token='.csrf_token().'&from=laravel-editor-md', //图片上传url
 ];

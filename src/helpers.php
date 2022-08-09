@@ -59,7 +59,8 @@ function editor_js()
 <script src="/vendor/editor.md/lib/sequence-diagram.min.js"></script>
 <script src="/vendor/editor.md/lib/flowchart.min.js"></script>
 <script src="/vendor/editor.md/lib/jquery.flowchart.min.js"></script>
-<script src="/vendor/editor.md/js/editormd.min.js"></script>';
+<script src="/vendor/editor.md/js/editormd.min.js"></script>
+<script src="/vendor/editor.md/js/uploadImg.js"></script>';
 
 }
 
@@ -83,8 +84,8 @@ $(function() {
     };
     _'.$editor_id.' = editormd({
             id : "'.$editor_id.'",
-            width : "90%",
-            height : 640,
+            width : '.config('editor.width').',
+            height :  '.config('editor.height').',
             saveHTMLToTextarea : '.config('editor.saveHTMLToTextarea').',
             emoji : '.config('editor.emoji').',
             taskList : '.config('editor.taskList').',
@@ -96,8 +97,11 @@ $(function() {
             sequenceDiagram: '.config('editor.sequenceDiagram').',
             path : "/vendor/editor.md/lib/",
             imageUpload : '.config('editor.imageUpload').',
-            imageFormats : ["jpg", "gif", "png"],
-            imageUploadURL : "/laravel-editor-md/upload/picture?_token='.csrf_token().'&from=laravel-editor-md"
+            imageFormats : '.config('editor.imageFormats').',["jpg", "gif", "png"],
+            imageUploadURL : '.config('editor.imageUploadURL').',
+            onload:function() {
+                            initPasteDragImg(this); //粘贴图片上传
+                        }
     });
 });
 </script>';
